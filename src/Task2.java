@@ -28,7 +28,7 @@ public class Task2 {
         double sumLessThanA = 0;
         double productGreaterThanB = 1;
         double maxX = X[0];
-        double minX = X[0];
+        double minX = Double.MAX_VALUE;
 
         // Обчислення суми, добутку, max та min
         for (int i = 0; i < n; i++) {
@@ -52,6 +52,10 @@ public class Task2 {
         System.out.println("Сума X(i) < a: " + sumLessThanA);
         System.out.println("Добуток X(i) > b: " + productGreaterThanB);
         System.out.println("max X(i): " + maxX);
-        System.out.println("min X(i) серед [a, b]: " + minX);
+        if (minX == Double.MAX_VALUE) {
+            System.out.println("min X(i) серед [a, b]: Немає таких елементів.");
+        } else {
+            System.out.println("min X(i) серед [a, b]: " + minX);
+        }
     }
 }
